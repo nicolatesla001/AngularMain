@@ -23,15 +23,21 @@ const routes: Route[] = [
       {path: '', redirectTo: 'users', pathMatch: 'full'},
       {
         path: 'users', component: UsersComponent, children: [
-          {path:':id', component:UserDetailsComponent}
+          {path: ':id', component: UserDetailsComponent}
         ]
       },
       {
         path: 'posts', component: PostsComponent, children: [
-          {path:':id',component:PostDetailsComponent}
+          {path: ':id', component: PostDetailsComponent}
         ]
       },
-      {path: 'comments', component: CommentsComponent, children: []}
+      {
+        path: 'comments', component: CommentsComponent, children: [
+          {
+            path: ':id', component: CommentDetailsComponent
+          }
+        ]
+      }
     ]
   }
 ]
