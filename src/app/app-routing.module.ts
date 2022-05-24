@@ -10,7 +10,7 @@ const routes:Routes=[
       {path:'', redirectTo:'users',pathMatch:'full'},
       {path:'users', loadChildren:()=>import('./modules').then(value => value.UserModule)},
       {path:'posts', loadChildren:()=>import('./modules').then(value => value.PostModule)},
-      {path:'comment', loadChildren:()=>import('./modules').then(value => value.CommentModule)}
+      {path:'comments', loadChildren:()=>import('./modules').then(value => value.CommentModule)}
     ]
   }
 ]
